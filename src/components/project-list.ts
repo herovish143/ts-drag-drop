@@ -1,4 +1,8 @@
 /// <reference path="base-component.ts" />
+/// <reference path="../decorators/autobind.ts" />
+/// <reference path="../state/project.ts" />
+/// <reference  path="../models/drag-drop.ts" />
+/// <reference  path="../models/project.ts" />
 namespace Vis {
     // Project List Class
 export class ProjectList extends Component<HTMLDivElement, HTMLElement> implements DragTarget {
