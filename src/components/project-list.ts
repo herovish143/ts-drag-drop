@@ -1,14 +1,14 @@
-/// <reference path="base-component.ts" />
-/// <reference path="../decorators/autobind.ts" />
-/// <reference path="../state/project.ts" />
-/// <reference  path="../models/drag-drop.ts" />
-/// <reference  path="../models/project.ts" />
-namespace Vis {
-    // Project List Class
+import { Component } from "./base-component.js";
+import { DragTarget } from "../models/drag-drop.js";
+import { Project, ProjectStatus } from "../models/project.js";
+import { autobind } from "../decorators/autobind.js";
+import { projectState } from "../state/project.js";
+import { ProjectItem } from "./project-item.js";
 export class ProjectList extends Component<HTMLDivElement, HTMLElement> implements DragTarget {
 
 
     assignedProject: Project[] = [];
+
 
 
     constructor(private type: 'active' | 'finished') {
@@ -76,7 +76,5 @@ export class ProjectList extends Component<HTMLDivElement, HTMLElement> implemen
             new ProjectItem(this.element.querySelector('ul')!.id, prjItem);
         }
     }
-
-}
 
 }
