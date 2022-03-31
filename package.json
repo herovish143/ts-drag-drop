@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "lite-server",
+    "build": "webpack"
   },
   "keywords": [
     "typescript",
@@ -14,7 +15,11 @@
   "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   }
 }
-
